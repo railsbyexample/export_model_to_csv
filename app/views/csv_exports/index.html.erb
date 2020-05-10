@@ -1,0 +1,17 @@
+<h1>All CSV exports</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Created at</th>
+  </tr>
+
+  <% @csv_exports.each do |csv_export| %>
+    <tr>
+      <td><%= csv_export.id %></td>
+      <td><%= csv_export.created_at.to_s(:long) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= paginate @csv_exports %>
