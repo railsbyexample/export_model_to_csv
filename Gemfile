@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use S3 as ActiveStorage backend
 gem 'aws-sdk-s3', require: false
 
+# Use sidekiq as ActiveJob backend
+gem 'sidekiq'
+
 group :development, :test do
   # Use capybara for feature tests
   gem 'capybara'
