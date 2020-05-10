@@ -1,5 +1,10 @@
 <h1>All users</h1>
 
+<ul>
+  <li><%= link_to 'CSV Exports', csv_exports_path %></li>
+  <li><%= button_to 'Export all users to CSV', csv_exports_path %></li>
+</ul>
+
 <table>
   <tr>
     <th>ID</th>

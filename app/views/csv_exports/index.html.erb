@@ -1,15 +1,27 @@
 <h1>All CSV exports</h1>
 
+<ul>
+  <li><%= link_to 'Users', users_path %></li>
+</ul>
+
 <table>
   <tr>
     <th>ID</th>
     <th>Created at</th>
+    <th>File</th>
   </tr>
 
   <% @csv_exports.each do |csv_export| %>
     <tr>
       <td><%= csv_export.id %></td>
       <td><%= csv_export.created_at.to_s(:long) %></td>
+
+      <% if csv_export.file.attached? %>
+        <td>
+          <%= link_to 'Download', url_for(csv_export.file),
+                download: csv_export.file.name %>
+        </td>
+      <% end %>
     </tr>
   <% end %>
 </table>
