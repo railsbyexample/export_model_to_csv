@@ -34,6 +34,12 @@ gem 'aws-sdk-s3', require: false
 # Use sidekiq as ActiveJob backend
 gem 'sidekiq'
 
+# Use faker to generate sample data
+gem 'faker'
+
+# Use kaminari for pagination
+gem 'kaminari'
+
 group :development, :test do
   # Use capybara for feature tests
   gem 'capybara'
