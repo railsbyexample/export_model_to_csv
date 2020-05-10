@@ -1,6 +1,6 @@
 class CsvExportsController < ApplicationController
   def create
-    CsvExport.create!
+    CsvExportJob.perform_later(CsvExport.create!)
     redirect_to csv_exports_url
   end
 

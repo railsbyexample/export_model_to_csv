@@ -12,6 +12,16 @@ RSpec.describe 'CsvExports', type: :request do
         post '/csv_exports'
       end.to change(CsvExport, :count).by(1)
     end
+
+    it 'dispatches a job to create the export' do
+      expect do
+        post '/csv_exports'
+      end.to(
+        have_enqueued_job(CsvExportJob).with do |csv_export|
+          expect(csv_export).to eq(CsvExport.last)
+        end
+      )
+    end
   end
 
   describe 'GET /csv_exports' do
