@@ -1,6 +1,6 @@
 require 'faker'
 
-NUM_USERS = 10_000
+NUM_USERS = 3000
 
 puts "Creating users database (with #{NUM_USERS} users)"
 

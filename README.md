@@ -2,6 +2,8 @@
 
 Using `ActiveJob` and `ActiveStorage`
 
+Check out [the sample](https://rails-export-model-to-csv.herokuapp.com/).
+
 ## Motivation
 
 You might want to provide a way for your users to export their data. The simplest way to do this is to let them download a CSV file with the data. It is easy to serialize a model into this format in Ruby and it's easy to open and edit for the users. Also, it is fair to let users own the data they generate in your application.
